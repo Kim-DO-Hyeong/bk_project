@@ -1,0 +1,140 @@
+#join_area, #blank_wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* join_area */
+#join_area {
+    margin-top: 50px;
+}
+
+#join_area h1, #sub_title_wrapper h5 {
+    font-weight: 900;
+}
+
+#sub_title_wrapper span {
+    color: red;
+}
+
+#join_wrapper {
+    display: flex;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#join_wrapper > div {
+    width: 50%;
+}
+
+.bi-key, .bi-lock {
+    font-size: 30px;
+}
+
+#common_join #button_area {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#common_join button {
+    width: 400px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+#simple_join #button_area {
+    margin-left: 35px;
+}
+#simple_join #button_area div {
+    margin-top: 20px;
+}
+#simple_join #button_area button {
+    width: 300px;
+    height: 50px;
+}
+/* login_area */
+
+/* order_wrapper */
+#blank {
+    margin-top: 200px;
+    height: 500px;
+    background: #f2ebe6;
+}
+/* order_wrapper */
+
+/* 푸터 부분 */
+.footer {
+    height: 272px;
+    font-size: 0.875rem;
+    color: #818181;
+    background: #2b0200;
+}
+.footer .footercontainer {
+    position: relative;
+    max-width: 1144px;
+    padding: 47px 0;
+    border-top: 1px solid #bba391;
+    color: #bba391;
+    margin: 0 auto;
+}
+.footer .footercontainer .footermenu {
+    position: absolute;
+    top: 42px;
+    right: 0;
+}
+.footermenu li {
+    float: left;
+    list-style: none;
+}
+.footermenu ul a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #bba391;
+    text-decoration: none;
+}
+.footermenu .footerbtn {
+    text-align: right;
+}
+.footermenu .footerbtn a {
+    display: inline-block;
+    margin: 12px 0 0 3px;
+    padding: 0 32px;
+    color: #f5ebdc;
+    border: 1px solid rgba(187,163,145,.6);
+    border-radius: 16px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.copyright .logo {
+    margin-bottom: 24px;
+}
+.copyright p {
+    line-height: 170%;
+    margin-bottom: 0px;
+}
+.copyright .footerline {
+    display: inline-block;
+    margin: 0 6px;
+    width: 1px;
+    height: 12px;
+    background: #bba391;
+    vertical-align: middle;
+}
+.copyright .sns {
+    margin-top: 20px;
+}
+.copyright .sns a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.copyright .sns .facebook {
+    background: url(../images/copyrightface.png);
+}
+.copyright .sns .instagram {
+    background:url(../images/copyrightinsta.png);
+} 

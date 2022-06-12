@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/join2.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="upside">
+            <div id="text_link">
+                <a href="main.html" id="first">브랜드</a>
+                <a href="login.html" id="middle">로그인</a>
+                <a href="#" id="last">고객센터</a>
+            </div>
+            <div id="logo_wrapper">
+                <div id="logo">
+                    <img src="https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png">
+                    <h1>버거킹</h1>
+                </div>
+                <div id="join_btn">
+                    <button type="button" class="btn btn-dark">회원가입</button>
+                </div>
+            </div>
+        </div>
+        <div id="downside">
+            <nav id="bradcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">Home</li>
+                  <li class="breadcrumb-item active" aria-current="page">로그인</li>
+                  <li class="breadcrumb-item active" aria-current="page">회원가입</li>
+                  <li class="breadcrumb-item active" aria-current="page">상세</li>
+                </ol>
+              </nav>
+        </div>
+    </header>
+
+    <div id="order_wrapper">
+        <div id="order_area">
+            <h1 class="title">회원가입</h1>
+
+            <div id="common_info" class="info_box">
+                <div class="sub_title">
+                    <i class="bi bi-person-fill"></i>
+                    기본정보
+                </div>
+
+                <div class="alert alert-light notice" role="alert">회원정보를 입력해 주세요</div>
+                <div class="input_area">
+                    <div class="mb-3 row">
+                        <label for="inputEmail" class="col-sm-3 col-form-label">이메일 아이디</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="이메일 아이디">
+                          <div>
+                              <span class="small_txt">사용 가능한 이메일 주소를 입력해주세요.(예: name@mail.com)</span>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-3 col-form-label">이름</label>
+                        <div class="col-sm-9">
+                          <span>홍길동</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-3 col-form-label">휴대폰 번호</label>
+                        <div class="col-sm-9">
+                          <span>01012345678</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="choice_info" class="info_box">
+                <div class="sub_title">
+                    <i class="bi bi-check-lg"></i>
+                    선택정보
+                </div>
+
+                <div class="input_area">
+                    <div class="mb-3 row">
+                        <label class="col-sm-3 col-form-label">성별</label>
+                        <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="no_gender" value="null">
+                                <label class="form-check-label" for="no_gender">선택안함</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="m">
+                                <label class="form-check-label" for="male">남</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="f">
+                                <label class="form-check-label" for="female">여</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-3 col-form-label">생년월일</label>
+                        <div class="col-sm-9">
+                            <div class="form-check" id="birth_day_wrapper">
+                                <select class="form-select" aria-label="Default select example" id="inputYear">
+                                    <option>선택</option>
+                                </select>
+                                <select class="form-select" aria-label="Default select example" id="inputMonth">
+                                    <option>선택</option>
+                                </select>
+                                <select class="form-select" aria-label="Default select example" id="inputDay">
+                                    <option>선택</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <span class="small_txt">선택항목 추가 후, 생일쿠폰등 다양한 혜택 받으세요.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="password_info" class="info_box">
+                <div class="sub_title">
+                    <i class="bi bi-key-fill"></i>
+                    비밀번호 입력
+                </div>
+
+                <div class="input_area">
+                    <div class="mb-3 row">
+                        <label for="inputPw" class="col-sm-3 col-form-label">비밀번호</label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="inputPw" placeholder="비밀번호, 영문, 숫자, 특수문자 조합(10~20자사이)">
+                          <div>
+                              <span class="small_txt">사용할 비밀번호를 입력해주세요.</span>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputPwCheck" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="inputPwCheck" placeholder="비밀번호 확인">
+                          <div>
+                              <span class="small_txt">비밀번호를 다시한번 입력해 주세요.</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button_area">
+                <button type="button" class="btn btn-dark">회원가입</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 부분 -->
+   <div class="footer">
+    <div class="footercontainer">
+        <div class="footermenu">
+            <ul>
+                <li><a href="#"><span>이용약관</span></a></li>
+                <li><a href="#"><span>개인정보취급방침</span></a></li>
+                <li><a href="#"><span>법적고지</span></a></li>
+            </ul>
+            <div class="footerbtn">
+                <a href="#"><span>인재채용</span></a>
+                <a href="#"><span>가맹점모집</span></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h2 class="logo"><img src="images/bkrlogo.png" alt="BKR Logo"></h2>
+            <p>
+                서울 종로구 삼봉로 71 G타워 2층 주식회사 비케이알 <span class="footerline"></span>
+                전화주문 1599-0909
+            </p>
+            <p><a>사업자 등록번호 101-86-76277</a> <span class="footerline"></span>
+                (주)BKR 대표이사 문영주
+            </p>
+            <p>Copyright 2019 BKR Co., Ltd. All right Reserved</p>
+            <div class="sns">
+                <a href="#" class="facebook"></a>
+                <a href="#" class="instagram"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        let $inputYear = $("#inputYear");
+        let year = new Date().getFullYear();
+
+        for(let i=year; i>=1906; i--) {
+            $inputYear.append("<option value=\"" + i + "\">" + i + "년</option>");
+        }
+
+        let $month = $("#inputMonth");
+                
+        for(let month=1; month<=12; month++) {
+            if(month <= 9) {
+                month = "0" + month; 
+            }
+
+            $month.append("<option value=\"" + month + "\">" + month + "월</option>");
+        }
+
+        let $day = $("#inputDay");
+        for(let day=1; day<=31; day++) {
+            if(day <= 9) {
+                day = "0" + day;
+            }
+
+            $day.append("<option value=\"" + day + "\">" + day + "일</option>");
+        }
+
+        $("#join_btn button").on("click", function() {
+        	location.href = "join.html";
+        
+        });
+
+        $(".button_area button").on("click", function() {
+
+        	let email = $("#inputEmail").val();
+        	let gender = $("input[name=gender]:checked").val();
+        	let years = $("#inputYear").val();
+        	let month = $("#inputMonth").val();
+        	let day = $("#inputDay").val();
+        	
+        	let birth = years + month + day;
+        	
+        	let pw = $("#inputPw").val();
+        	let pwCheck = $("#inputPwCheck").val();
+        	
+        	
+        	// 비밀번호 체크 코드 
+        	// 비밀번호 체크 : 영어, 숫자 , 특수문자를 포함해야하는 정규식
+        	let check = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{10,20}$/;
+        	let pwChecked = false;
+        	
+        	
+        	if(check.test(pw)){
+        		if(pw==pwCheck){
+        			pwChecked = true;
+        		}else{
+        			alert("비밀번호 확인 체크를 해주세요");
+        		}	
+        	}else{
+        		alert("비밀번호는 영어, 숫자, 특수문자를 포함하는 10자리 이상 20자리 이하이어야 합니다 ");
+        	}
+        	// 비밀번호 체크 코드 - end
+        	
+        	if(pwChecked){
+        	$.ajax({
+        		url:"/burgerking/join",
+        		type:"POST",
+        		data:"email="+email+"&gender="+gender+"&birth="+birth+"&pw="+pw,
+        		success:function(){
+        			location.href = "joinSuccess.html";	
+				
+        		},
+        		error:function(){
+        			alert("아이디가 중복되었습니다");
+        		}
+        	});
+        	}else{
+        		
+        	}
+        });
+    </script>
+</body>
+</html>

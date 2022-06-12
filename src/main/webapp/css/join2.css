@@ -1,0 +1,153 @@
+#order_area {
+    width: 790px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.info_box {
+    margin-top: 30px;
+}
+
+.info_box label {
+    font-weight: 900;
+}
+
+#order_area .title {
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#order_area .sub_title {
+    font-size: 20px;
+}
+
+#order_area .sub_title i {
+    font-size: 30px;
+}
+
+#order_area .notice {
+    margin-bottom: 0;
+    padding-left: 40px;
+    height: 70px;
+    line-height: 2;
+    font-size: 20px;
+    color: black;
+    font-weight: 900;
+    background: lightgray;
+    border: none;
+}
+
+#order_area .input_area {
+    background: white;
+    padding: 40px;
+    font-size: 20px;
+}
+
+#inputEmail, #inputYear, #inputMonth, #inputDay, #inputPw, #inputPwCheck {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.input_area .small_txt {
+    font-size: 15px;
+    color: red;
+}
+
+#order_area .button_area {
+    text-align: center;
+    margin-top: 40px;
+}
+#order_area .button_area button {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+#birth_day_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+#birth_day_wrapper select {
+    width: 30%;
+}
+
+/* 푸터 부분 */
+.footer {
+    height: 272px;
+    font-size: 0.875rem;
+    color: #818181;
+    background: #2b0200;
+}
+.footer .footercontainer {
+    position: relative;
+    max-width: 1144px;
+    padding: 47px 0;
+    border-top: 1px solid #bba391;
+    color: #bba391;
+    margin: 0 auto;
+}
+.footer .footercontainer .footermenu {
+    position: absolute;
+    top: 42px;
+    right: 0;
+}
+.footermenu li {
+    float: left;
+    list-style: none;
+}
+.footermenu ul a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #bba391;
+    text-decoration: none;
+}
+.footermenu .footerbtn {
+    text-align: right;
+}
+.footermenu .footerbtn a {
+    display: inline-block;
+    margin: 12px 0 0 3px;
+    padding: 0 32px;
+    color: #f5ebdc;
+    border: 1px solid rgba(187,163,145,.6);
+    border-radius: 16px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.copyright .logo {
+    margin-bottom: 24px;
+}
+.copyright p {
+    line-height: 170%;
+    margin-bottom: 0px;
+}
+.copyright .footerline {
+    display: inline-block;
+    margin: 0 6px;
+    width: 1px;
+    height: 12px;
+    background: #bba391;
+    vertical-align: middle;
+}
+.copyright .sns {
+    margin-top: 20px;
+}
+.copyright .sns a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.copyright .sns .facebook {
+    background: url(../images/copyrightface.png);
+}
+.copyright .sns .instagram {
+    background:url(../images/copyrightinsta.png);
+} 
