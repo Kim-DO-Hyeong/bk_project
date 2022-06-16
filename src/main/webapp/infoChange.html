@@ -336,6 +336,7 @@
     <script src="js/page1.js"></script>
     <script>
 		 // 로그인 정보를 가져와서 보여줌
+		
 		$.ajax({
 			url:"/burgerking/loginstatus",
 			type:"GET",
@@ -402,11 +403,16 @@
         	let birth = years + month + day;
 			
 			$.ajax({
-				url:"",
+				url:"/burgerking/info/update",
 				type:"POST",
 				data:"phoneNumber="+phoneNumber+"&gender="+gender+"&birth="+birth,
-				success:function(){},
-				error:function(){}
+				success:function(){
+					alert("회원정보가 변경되었습니다");
+					location.href="/burgerking/myKing.html";
+				},
+				error:function(){
+					alert("회원정보가 변경에 실패했습니다");
+				}
 			});
 			
 		}); 
