@@ -17,9 +17,9 @@ public class LoginStatus extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 세션에서 로그인 정보를 가져옴
 		HttpSession session = request.getSession();
-
+		
 		String loginName = (String) session.getAttribute("loginName");
-
+		String memberID = (String) session.getAttribute("memberID");
 		
 		
 		
@@ -27,6 +27,7 @@ public class LoginStatus extends HttpServlet {
 		
 		// 세션에서 가져온 로그인 정보를 JSON객체를 통해 전달 
 		json.put("loginName", "hi");
+		json.put("memberID", "id@asd.com");
 		
 		response.setContentType("application/json;charset=UTF-8");
 		
