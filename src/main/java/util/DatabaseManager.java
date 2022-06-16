@@ -16,7 +16,7 @@ public class DatabaseManager {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
 			// DB에 접속, getConnection 연결 정보를 리턴하므로 Connection conn에 저장
-			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/shopdb3?user=root&password=1234");
+			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/burgerking?user=root&password=1234");
 						
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
