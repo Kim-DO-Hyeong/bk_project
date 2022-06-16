@@ -20,6 +20,10 @@ public class InfoUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
+		String phoneNumber = request.getParameter("phoneNumber");
+		String gender = request.getParameter("gender");
+		String birth = request.getParameter("birth");
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try {
@@ -28,10 +32,10 @@ public class InfoUpdate extends HttpServlet {
 			String sql = "UPDATE memberinfotbl SET phoneNumber = ?, gender = ?, birth = ? WHERE memberID = ?";
 			
 			pstmt = DatabaseManager.getPstmt(conn, sql);
-			pstmt.setString(1, "asd");
-			pstmt.setString(2, "asd");
-			pstmt.setString(3, "asd");
-			pstmt.setString(4, "asd");
+			pstmt.setString(1, phoneNumber);
+			pstmt.setString(2, gender);
+			pstmt.setString(3, birth);
+			pstmt.setString(4, "as@asd");
 			
 			int count = pstmt.executeUpdate();
 			
