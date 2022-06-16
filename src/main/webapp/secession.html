@@ -179,7 +179,7 @@
 						<dl>
 							<dt class="WEB">이메일</dt>
 							<dd>
-								<span>asdasd@naver.com</span>
+								<span id="emailInfo">asdasd@naver.com</span>
 							</dd>
 						</dl>
 					</div>
@@ -240,6 +240,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/page1.js"></script>
     <script>
+    	
+    		
+   		 // 로그인 정보를 가져와서 보여줌
+   		
+   		$.ajax({
+   			url:"/burgerking/loginstatus",
+   			type:"GET",
+   			success:function(data){
+   				$("#emailInfo").text(data.memberID);
+   				$(".personInfo p").text(data.loginName+"님 안녕하세요");
+   				$(".user strong").text(data.loginName+" 님!");
+   				
+   				
+   			},
+   			error:function(){
+   				alert("에러 발생함");
+   			}
+   		});
+   
+    
 	    // 회원탈퇴 버튼 초기에 투명하게
     	$(".btn_secession").attr("disabled",true).fadeTo(1,0.3);
 	    
@@ -266,17 +286,19 @@
 	    // 회원탈퇴 버튼 클릭시 
 	   	$(".btn_secession").on("click",function(){
 	   		let text = $("textarea").val();
+	   		let memberID = $("#emailInfo").text();
 	   		
 	   		if( $(".st02 option:selected").val()==0 ){
 	   			alert("탈퇴사유를 입력해주세요");
 	   		}else{
 	   			alert("탈퇴를 진행합니다");
 	   			$.ajax({
-	   				url:"",
+	   				url:"url주소",
 	   				type:"get",
-	   				data:"text="+text+"memberID="+memberID,	
+	   				data:"text="+text+"&memberID="+memberID,	
 	   				success:function(){
 	   					alert("탈퇴를 완료했습니다");
+	   					location.href="/burgerking/login.html";
 	   				},
 	   				error:function(){
 	   					alert("탈퇴를 실패했습니다");
