@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import util.DatabaseManager;
 
@@ -17,7 +18,9 @@ import util.DatabaseManager;
 public class InfoDelete extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		
+		String memberID =(String) request.getParameter("memberID");
+		
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -28,11 +31,13 @@ public class InfoDelete extends HttpServlet {
 			String sql = "DELETE FROM memberinfotbl WHERE memberID = ?";
 			
 			pstmt = DatabaseManager.getPstmt(conn, sql);
-			pstmt.setString(1, "아이디");
+			pstmt.setString(1, memberID);
 			
 			int count = pstmt.executeUpdate();
 			
 			if(count == 1) {
+				HttpSession session = request.getSession();
+				session.invalidate();
 				response.setStatus(HttpServletResponse.SC_OK);
 			}else {
 				response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
