@@ -28,6 +28,7 @@ public class InfoDelete extends HttpServlet {
 		try {
 			conn = DatabaseManager.getConnection();
 			
+			// 데이터를 삭제하는 쿼리 
 			String sql = "DELETE FROM memberinfotbl WHERE memberID = ?";
 			
 			pstmt = DatabaseManager.getPstmt(conn, sql);
@@ -36,6 +37,7 @@ public class InfoDelete extends HttpServlet {
 			int count = pstmt.executeUpdate();
 			
 			if(count == 1) {
+				// 세션에서 회원 정보까지 삭제 
 				HttpSession session = request.getSession();
 				session.invalidate();
 				response.setStatus(HttpServletResponse.SC_OK);
