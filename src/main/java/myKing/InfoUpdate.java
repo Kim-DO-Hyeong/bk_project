@@ -24,6 +24,8 @@ public class InfoUpdate extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String birth = request.getParameter("birth");
 		
+//		String memberID = request.getParameter("memberID");
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try {
@@ -35,7 +37,7 @@ public class InfoUpdate extends HttpServlet {
 			pstmt.setString(1, phoneNumber);
 			pstmt.setString(2, gender);
 			pstmt.setString(3, birth);
-			pstmt.setString(4, "as@asd");
+			pstmt.setString(4, "임시 memberID");	// 아이디를 저장에 따라서 ajax 에서 parameter 로 꺼내면 됩니다 
 			
 			int count = pstmt.executeUpdate();
 			
